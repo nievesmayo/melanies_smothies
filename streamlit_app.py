@@ -1,9 +1,11 @@
 
 
-# Import python packages
 import streamlit as st
-from snowflake.snowpark.context import get_active_session
+from snowflake.snowpark import Session
 from snowflake.snowpark.functions import col
+
+# Crear sesión Snowflake usando secretos guardados en Streamlit Cloud
+session = Session.builder.configs(st.secrets).create()
 
 
 # Write directly to the app
