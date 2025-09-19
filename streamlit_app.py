@@ -24,7 +24,8 @@ session=cnx.session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
-
+ 
+import requests
 
 ingredients_list = st.multiselect(
     'Choose up to 5 ingredients:'
@@ -61,8 +62,7 @@ if ingredients_list:
     #st.write(my_insert_stmt)
     #st.stop()
 
- 
-import requests
+
 
 
     
